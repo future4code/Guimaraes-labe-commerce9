@@ -22,13 +22,14 @@ class Produtos extends React.Component{
                 </label>
             
                 <div>
-                    { this.props.produtos.map((produto) => {
+                    { this.props.produtos.map((produto, index) => {
                         return (
                         <CardDeProdutos
+                        key={index}
                         id={produto.id}
                         nome={produto.nome}
                         value={produto.value}
-                        imageURL={produto.imageURL} />
+                        imageUrl={produto.imageUrl} />
                         )
                     })}
                 </div>
