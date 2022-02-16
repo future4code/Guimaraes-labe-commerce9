@@ -10,7 +10,6 @@ class Produtos extends React.Component{
     render() {
 
         return (
-
             <div>
                 <p>Produtos</p>
                 <label>
@@ -22,17 +21,17 @@ class Produtos extends React.Component{
                     </select>
                 </label>
             
-            <div>
-                { this.props.produto.map((produtos) => {
-                    return(
-                       <CardDeProdutos
-                       produtos ={produtos}
-                       adicionarCarrinho ={this.props.adicionarCarrinho}/>
-                    )
-                }
-                
-                )}
-            </div>
+                <div>
+                    { this.props.produtos.map((produto) => {
+                        return (
+                        <CardDeProdutos
+                        id={produto.id}
+                        nome={produto.nome}
+                        value={produto.value}
+                        imageURL={produto.imageURL} />
+                        )
+                    })}
+                </div>
             </div>
 
         )

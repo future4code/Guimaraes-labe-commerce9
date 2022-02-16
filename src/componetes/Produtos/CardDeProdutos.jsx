@@ -9,20 +9,17 @@ import Produtos from "./Produtos";
 class CardDeProdutos extends React.Component{
 
     render(){
-
-        const produto = this.props.produtos;
         return (
             <div>
 
                 <div>
-                    < img src={produtos.imageUrl}/>
-                    <div> Valor R$ {produtos.valeu}</div>
-                    <div>{produtos.nome}</div>
-                    <button onClick={() => this.props.adicionarCarrinho (produtos.id)}> Adicionar ao carrinho</button>
-                    
-                    </div>    
-
-
+                    <img src={this.props.imageURL}/>
+                    <div> Valor R$ {this.props.value}</div>
+                    <div>{this.props.nome}</div>
+                    <button onClick={() => this.props.adicionarCarrinho (this.props.id)}> Adicionar ao carrinho</button>
+                </div>  
+                
+                  
             </div>
 
 

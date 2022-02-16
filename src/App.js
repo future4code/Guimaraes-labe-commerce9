@@ -79,10 +79,7 @@ class App extends React.Component{
 
   render() {
     return (
-      <div>
-        <p>Labe-Brinquedos</p>
-      
-      </div>
+      <Produtos produtos={produtos} />
     );
   }
 }
