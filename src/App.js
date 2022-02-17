@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
+import Header from './components/Header';
 import Produtos from './components/Produtos/Produtos';
 
-const Container = styled.div`
 
+const Container = styled.div`
+  max-width: 1250px;
+  margin: 0 auto;
 `
 
 class App extends React.Component{
@@ -80,14 +83,17 @@ class App extends React.Component{
   
 
   render() {
-
+    
     return (
+      <>
+      <Header />
       <Container>
         <p>Labe-Brinquedos</p>
 
         <Produtos produtos={this.state.produtos} />
 
       </Container>
+      </>
     );
   }
 }
