@@ -1,29 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import { AiOutlineHome } from 'react-icons/ai'
-import { MdOutlineToys } from 'react-icons/md'
-import { RiTShirt2Line } from 'react-icons/ri'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
-
-const NavAnimation = keyframes`
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0%);
-    }
-`
-
-const BackgroundAnimation = keyframes`
-    from {
-        filter: opacity(0%)
-    }
-
-    to {
-        filter: opacity(100%)
-    }
-`
+import styled from "styled-components";
 
 const Container = styled.div`
     height: 100vh;

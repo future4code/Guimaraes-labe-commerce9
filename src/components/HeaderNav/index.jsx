@@ -1,29 +1,9 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { AiOutlineHome } from 'react-icons/ai'
 import { MdOutlineToys } from 'react-icons/md'
 import { RiTShirt2Line } from 'react-icons/ri'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-
-const NavAnimation = keyframes`
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0%);
-    }
-`
-
-const BackgroundAnimation = keyframes`
-    from {
-        filter: opacity(0%)
-    }
-
-    to {
-        filter: opacity(100%)
-    }
-`
 
 const Container = styled.div`
     height: 100vh;
@@ -95,25 +75,25 @@ const HeaderNav = ({ navMenu, openMenu }) => {
         <Background navMenu={navMenu} onClick={openMenu} />
         <Container navMenu={navMenu} >
             <ContainerItems>
-                <a href="">
+                <a href="../../App">
                     <div>
                         <AiOutlineHome />
                         <span>Página Inicial</span>
                     </div>
                 </a>
-                <a href="">
+                <a href="../../App">
                     <div>
                         <MdOutlineToys />
                         <span>Brinquedos</span>
                     </div>
                 </a>
-                <a href="">
+                <a href="../../App">
                     <div>
                         <RiTShirt2Line />
                         <span>Camisetas</span>
                     </div>
                 </a>
-                <a href="">
+                <a href="../../App">
                     <div>
                         <AiOutlineShoppingCart />
                         <span>Carrinho</span>
