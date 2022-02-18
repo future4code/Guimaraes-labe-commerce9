@@ -10,7 +10,7 @@ import './App.css';
 
         const totalItens = Object.keys(carrinho).length
 
-      return(
+      return (
         <main>
             <div className='container'>
                 <h2>Carrinho de Produtos</h2> {totalItens === 0 ? "" :
