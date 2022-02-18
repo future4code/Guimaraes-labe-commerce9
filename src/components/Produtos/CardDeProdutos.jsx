@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 class CardDeProdutos extends React.Component{
 
@@ -10,11 +9,11 @@ class CardDeProdutos extends React.Component{
 
 
                 <div>
-                    <img src={this.props.imageUrl}/>
-                    <div> Valor R$ {this.props.value}</div>
-                    <div>{this.props.nome}</div>
-                    <button onClick={() => this.props.adicionarCarrinho (this.props.id)}> Adicionar ao carrinho</button>
-                </div>  
+                    <img src={this.props.produto.imageUrl} alt={this.props.produto.nome} />
+                    <div> Valor R$ {this.props.produto.value}</div>
+                    <div>{this.props.produto.nome}</div>
+                    <button onClick={() => this.props.adicionarCarrinho(this.props.produto)}> Adicionar ao carrinho</button>
+                </div>
 
 
             </div>

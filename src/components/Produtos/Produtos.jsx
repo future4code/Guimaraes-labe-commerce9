@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import CardDeProdutos from "./CardDeProdutos";
 
 
@@ -25,11 +24,9 @@ class Produtos extends React.Component{
                     { this.props.produtos.map((produto, index) => {
                         return (
                         <CardDeProdutos
-                        key={index}
-                        id={produto.id}
-                        nome={produto.nome}
-                        value={produto.value}
-                        imageUrl={produto.imageUrl} />
+                        adicionarCarrinho={this.props.adicionarCarrinho}
+                        produto={produto}
+                        key={index} />
                         )
                     })}
                 </div>
