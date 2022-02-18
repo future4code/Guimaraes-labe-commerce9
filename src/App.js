@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
+import toys from './data/toys.json'
+import shirts from './data/toys.json'
 import Header from './components/Header';
 import Produtos from './components/Produtos/Produtos';
-import products from './products';
-
 
 const Container = styled.div`
   max-width: 1250px;
@@ -14,7 +14,9 @@ const Container = styled.div`
 class App extends React.Component{
 
   state = {
-    carrinho: []
+    carrinho: [],
+    toys: toys,
+    shirts: shirts,
   }
 
   adicionarCarrinho = (produto) => {
@@ -59,7 +61,7 @@ class App extends React.Component{
       <Container>
         <p>Labe-Brinquedos</p>
 
-        <Produtos produtos={products} adicionarCarrinho={this.adicionarCarrinho} />
+        <Produtos produtos={this.state.toys} adicionarCarrinho={this.adicionarCarrinho} />
 
       </Container>
       </>
