@@ -3,17 +3,19 @@ import './App.css';
 import styled from 'styled-components';
 import Header from './components/Header';
 import Produtos from './components/Produtos/Produtos';
-
+import Carrinho from './components/Carrinnho';
 
 const Container = styled.div`
   max-width: 1250px;
   margin: 0 auto;
 `
 
+
+
 class App extends React.Component{
 
   state = {
-    produtos: [
+    carrinho: [
       { id: 1,
         nome: 'Arma',
         value: 150.00,
@@ -68,29 +70,21 @@ class App extends React.Component{
         value: 899.00,
         imageUrl: 'https://i.ibb.co/6PMyVgc/DARTH-VADER.jpg'
       },
-    ],
+    ] 
 
-    carrinho: [
-      {
-      id: '',
-      nome: '',
-      value: '',
-      imageUrl:'',
-      quantidade:''
-      }
-    ]
-  }  
+ }
   
 
   render() {
     
     return (
       <>
-      <Header />
+      <Header/>
       <Container>
         <p>Labe-Brinquedos</p>
 
         <Produtos produtos={this.state.produtos} />
+        <Carrinho Carrinho={this.state.carrinho} />
 
       </Container>
       </>
