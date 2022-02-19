@@ -9,3 +9,8 @@ body {
 img {
   max-width: 100vw;
 }
+
+button {
+  font-family: 'Ruda', sans-serif;
+  cursor: pointer;
+}

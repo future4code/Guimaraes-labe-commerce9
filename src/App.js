@@ -14,7 +14,12 @@ const Container = styled.div`
 class App extends React.Component{
 
   state = {
-    carrinho: [],
+    carrinho: [{   "id": 1,
+    "nome": "Arma",
+    "value": 150.00,
+    "imageUrl": "https://i.ibb.co/9h25HKP/arma.jpg",
+    "quantidade": 1,
+  }],
     toys: toys,
     shirts: shirts,
   }
@@ -56,7 +61,7 @@ class App extends React.Component{
     
     return (
       <>
-      <Header />
+      <Header carrinho={this.state.carrinho} removerCarrinho={this.removerCarrinho} />
       <Container>
         <p>Labe-Brinquedos</p>
 

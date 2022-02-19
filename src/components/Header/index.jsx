@@ -40,7 +40,7 @@ const ContainerItems = styled.div`
     }
 `
 
-const Header = () => {
+const Header = ({ carrinho, removerCarrinho }) => {
     const [navMenu, setNavMenu] = useState(false)
     const [shopMenu, setShopMenu] = useState(false)
 
@@ -76,7 +76,7 @@ const Header = () => {
             </ContainerItems>
         </Container>
         <HeaderNav navMenu={navMenu} openMenu={openMenu} />
-        <HeaderShop shopMenu={shopMenu} openShop={openShop} />
+        <HeaderShop shopMenu={shopMenu} openShop={openShop} carrinho={carrinho} removerCarrinho={removerCarrinho} />
         </>
     )
 }
