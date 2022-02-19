@@ -5,25 +5,28 @@ import styled from "styled-components";
 
 
 const PrincipalDiv = styled.div `
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
+display: flex;
+flex-grow: 3;
+align-self: stretch;
+justify-content: center;
 `
 const SecudariaDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  align-self: stretch;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 30px;
+margin:30px;
+
 
 `
 
-const GridDeProdutos = styled.div`
+
+
+const ProdutosInt = styled.div`
   margin: 1em 0.5em;
   display: grid;
   grid-template: 1fr 1fr / repeat(4, 1fr);
-  gap: 0.5em;
+  gap: 2em;
 
 `
 
@@ -41,15 +44,15 @@ class Produtos extends React.Component{
                 <div>
                 <p>Produtos</p>
                 <label>
-                    { " "}
-                    Ordenação:
-                    <select>
-                        <option> Crescente </option>
-                        <option> Decrescente</option>
-                    </select>
-                </label>
+              {" "}
+              Pesquisa:
+              <select>
+                <option>Crescente</option>
+                <option>Decrescente</option>
+              </select>
+            </label>
                 </div>
-                <GridDeProdutos>
+                <ProdutosInt>
                     { this.props.produtos.map((produto, index) => {
                         return (
                         <CardDeProdutos
@@ -58,7 +61,7 @@ class Produtos extends React.Component{
                         key={index} />
                         )
                     })}
-                </GridDeProdutos>
+                </ProdutosInt>
                 </SecudariaDiv>
             </PrincipalDiv>
 
