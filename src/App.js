@@ -6,6 +6,8 @@ import shirts from './data/toys.json'
 import Header from './components/Header';
 import Produtos from './components/Produtos/Produtos';
 
+
+
 const Container = styled.div`
   max-width: 1250px;
   margin: 0 auto;
@@ -16,8 +18,11 @@ class App extends React.Component{
   state = {
     carrinho: [],
     toys: toys,
-    shirts: shirts,
+    
+
   }
+
+  
 
   adicionarCarrinho = (produto) => {
     let contem = false
@@ -55,18 +60,21 @@ class App extends React.Component{
   render() {
     
     return (
+    
       <>
       <Header />
+      
       <Container>
         <p>Labe-Brinquedos</p>
 
         <Produtos produtos={this.state.toys} adicionarCarrinho={this.adicionarCarrinho} />
+        
 
       </Container>
       </>
     );
   }
-}
+};
   
 
 export default App;
