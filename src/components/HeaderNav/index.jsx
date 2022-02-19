@@ -6,7 +6,7 @@ import { RiTShirt2Line } from 'react-icons/ri'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 const Container = styled.div`
-    height: 100vh;
+    height: calc(100vh - 87px);
     width: 40vw;
     margin-top: 4.3rem;
     position: fixed;

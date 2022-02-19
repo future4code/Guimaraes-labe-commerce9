@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import HeaderShopContainer from "./HeaderShopContainer";
+import { AiOutlineClose } from 'react-icons/ai'
 
 const Container = styled.div`
-    height: 100vh;
+    height: calc(100vh - 87px);
     width: 40vw;
     margin-top: 4.3rem;
     position: fixed;
@@ -22,9 +24,63 @@ const Container = styled.div`
 const ContainerItems = styled.div`
     width: 100%;
     padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+        width: 100%;
+    }
+
+    svg {
+        font-size: 40px;
+        color: #223B60;
+        cursor: pointer;
+    }
 
     button {
+        width: 90%;
+        padding: 5% 6%;
+        border-radius: 20px;
+        border: none;
+        background-color: #223B60;
+        color: white;
+        font-size: 1rem;
+        border: 3px solid #223B60;
+        transition: background-color 0.5s ease;
+        font-weight: bold;
 
+        :hover {
+            background-color: #f1f1f1;
+            color: #223B60;
+            transition: color 0.3s ease;
+        }
+    }
+
+    .carrinhoTotal {
+        width: 90%;
+        background-color: #e1e1e1;
+        border-radius: 0px 0px 20px 20px;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+
+        h4 {
+            margin: 0;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 0;
+        }
+    }
+
+    .shopContainer {
+        height: 100%;
+        width: 90%;
+        margin-top: 1rem;
+        background-color: #e1e1e1;
+        border-radius: 20px 20px 0px 0px;
+        padding: 1rem 1rem 0rem 1rem;
+        overflow-y: auto;
     }
 `
 
@@ -38,15 +94,31 @@ const Background = styled.div`
     visibility: ${props => !props.shopMenu ? "hidden" : "initial"};
 `
 
-const HeaderShop = ({ shopMenu, openShop }) => {
+const getTotal = (array) => {
+    let output = 0
+    array.map((item) => {
+        output += item.price
+    })
+
+    return output
+}
+
+const HeaderShop = ({ shopMenu, openShop, carrinho, removerCarrinho }) => {
     return (
         <>
         <Background shopMenu={shopMenu} onClick={openShop} />
         <Container shopMenu={shopMenu} >
             <ContainerItems>
                 <div>
+                    <AiOutlineClose onClick={openShop} />
                 </div>
-                <button>Ir para o carrinho</button>
+                <div className="shopContainer">
+                    <HeaderShopContainer carrinho={carrinho} removerCarrinho={removerCarrinho} />
+                </div>
+                <div className="carrinhoTotal">
+                    <h4>Total: R$ {carrinho.reduce((a, b) => a + (b.value * b.quantidade), 0).toFixed(2)}</h4>
+                </div>
+                <button>Finalizar compra</button>
             </ContainerItems>
         </Container>
         </>
