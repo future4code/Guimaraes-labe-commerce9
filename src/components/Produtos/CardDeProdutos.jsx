@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const CardPrincipal = styled.div`
-box-shadow: 2px 2px 2px rgba(136, 34, 136, 1);
+box-shadow: 2px 2px 4px rgba(136, 34, 136, 1);
 padding: 0.4em 0;
 display: grid;
 grid-templete-rows: 1fr 1fr ;
@@ -13,27 +13,27 @@ grid-template-columns: 1fr 1fr 1fr;
 const BotaoProduto = styled.button`
 display: inline-block;
 padding: 0.35em 1.2em;
-border: 0.1em solid #ffffff;
+border: 0.1em solid blue;
 margin: 0.2em 0.3em;
 border-radius: 0.12em;
 box-sizing: boarder-box;
 text-decoration: none;
 font-family: "Roboto", sans-serif;
 font-weight: 300,
-color: #ffffff;
+color: blue;
 text-align: center;
 transition: all 0.2s;
 backgraund-color: rgb(136, 34, 136);
 &:hover{
     color: rgb(136, 34,136);
     border: 0.1em solid rgb(136, 34, 136);
-    backgraund-color: #ffffff
+    backgraund-color: blue
 }
 
 `
 const ImgPrincipal = styled.img`
-height: 50px;
-width : 50px;
+height: 200px;
+width : 200px;
 display: flex;
 flex-directin:columns;
 justify-content: center;

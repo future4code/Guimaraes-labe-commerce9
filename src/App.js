@@ -5,6 +5,8 @@ import toys from './data/toys.json'
 import shirts from './data/toys.json'
 import Header from './components/Header';
 import Produtos from './components/Produtos/Produtos';
+import Rodape from './components/Footer/Rodape';
+
 
 const Container = styled.div`
   max-width: 1250px;
@@ -66,8 +68,8 @@ class App extends React.Component{
         <p>Labe-Brinquedos</p>
 
         <Produtos produtos={this.state.toys} adicionarCarrinho={this.adicionarCarrinho} />
-
       </Container>
+      <Rodape/>
       </>
     );
   }
