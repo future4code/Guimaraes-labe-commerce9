@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { HiMenu } from 'react-icons/hi';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { useState } from "react";
 import HeaderNav from "../HeaderNav";
 import HeaderShop from "../HeaderShop";
 
@@ -40,43 +39,24 @@ const ContainerItems = styled.div`
     }
 `
 
-const Header = ({ carrinho, removerCarrinho }) => {
-    const [navMenu, setNavMenu] = useState(false)
-    const [shopMenu, setShopMenu] = useState(false)
-
-    const openMenu = () => {
-        if (shopMenu) {
-            setShopMenu(false)
-        }
-
-        setNavMenu(!navMenu)
-    }
-
-    const openShop = () => {
-        if (navMenu) {
-            setNavMenu(false)
-        }
-
-        setShopMenu(!shopMenu)
-    }
-
+const Header = ({ carrinho, removerCarrinho, navInfo, changePage }) => {
     return (
         <>
         <Container>
             <ContainerItems>
-                <div onClick={openMenu}>
+                <div onClick={navInfo.openNav}>
                     <HiMenu />
                 </div>
                 <div>
                     <h2>LOGO</h2>
                 </div>
-                <div onClick={openShop}>
+                <div onClick={navInfo.openShop}>
                     <AiOutlineShoppingCart />
                 </div>
             </ContainerItems>
         </Container>
-        <HeaderNav navMenu={navMenu} openMenu={openMenu} />
-        <HeaderShop shopMenu={shopMenu} openShop={openShop} carrinho={carrinho} removerCarrinho={removerCarrinho} />
+        <HeaderNav navMenu={navInfo.navMenu} openMenu={navInfo.openNav} changePage={changePage} />
+        <HeaderShop shopMenu={navInfo.shopMenu} openShop={navInfo.openShop} carrinho={carrinho} removerCarrinho={removerCarrinho} />
         </>
     )
 }

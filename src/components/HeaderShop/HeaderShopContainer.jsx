@@ -69,23 +69,12 @@ const CartItem = styled.div`
     }
 `
 
-const ImageContainer = styled.div`
-    width: 200px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-
-    img {
-        height: 100%;
-    }
-`
-
 const HeaderShopContainer = ({ carrinho, removerCarrinho }) => {
     return (
         <Container>
-            {carrinho.map((item) => {
+            {carrinho.map((item, index) => {
                 return (
-                    <CartItem>
+                    <CartItem key={index}>
                         <div className="esquerda">
                             <img src={item.imageUrl} alt={item.nome} />
                             <div className="info">

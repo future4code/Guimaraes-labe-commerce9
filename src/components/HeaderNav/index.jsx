@@ -8,7 +8,6 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 const Container = styled.div`
     height: calc(100vh - 87px);
     width: 40vw;
-    margin-top: 4.3rem;
     position: fixed;
     background-color: #f1f1f1;
     z-index: 2;
@@ -62,43 +61,39 @@ const ContainerItems = styled.div`
 const Background = styled.div`
     height: 100vh;
     width: 100vw;
-    margin-top: 4.3rem;
     position: fixed;
     background-color: #0000007f;
     z-index: 1;
     visibility: ${props => !props.navMenu ? "hidden" : "initial"};
 `
 
-const HeaderNav = ({ navMenu, openMenu }) => {
+const HeaderNav = ({ navMenu, openMenu, changePage }) => {
+    const handleClick = (page) => {
+        changePage(page)
+        openMenu()
+    }
+
     return (
         <>
         <Background navMenu={navMenu} onClick={openMenu} />
         <Container navMenu={navMenu} >
             <ContainerItems>
-                <a href="../../App">
-                    <div>
+                    <div onClick={() => handleClick("home")}>
                         <AiOutlineHome />
                         <span>Página Inicial</span>
                     </div>
-                </a>
-                <a href="../../App">
-                    <div>
+                    <div onClick={() => handleClick("brinquedos")}>
                         <MdOutlineToys />
                         <span>Brinquedos</span>
                     </div>
-                </a>
-                <a href="../../App">
-                    <div>
+                    <div onClick={() => handleClick("camisetas")}>
                         <RiTShirt2Line />
                         <span>Camisetas</span>
                     </div>
-                </a>
-                <a href="../../App">
                     <div>
                         <AiOutlineShoppingCart />
                         <span>Carrinho</span>
                     </div>
-                </a>
             </ContainerItems>
         </Container>
         </>

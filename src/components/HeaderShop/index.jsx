@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import HeaderShopContainer from "./HeaderShopContainer";
-import { AiOutlineClose } from 'react-icons/ai'
 
 const Container = styled.div`
     height: calc(100vh - 87px);
     width: 40vw;
-    margin-top: 4.3rem;
     position: fixed;
     background-color: #f1f1f1;
     z-index: 2;
@@ -33,12 +31,6 @@ const ContainerItems = styled.div`
         width: 100%;
     }
 
-    svg {
-        font-size: 40px;
-        color: #223B60;
-        cursor: pointer;
-    }
-
     button {
         width: 90%;
         padding: 5% 6%;
@@ -60,7 +52,7 @@ const ContainerItems = styled.div`
 
     .carrinhoTotal {
         width: 90%;
-        background-color: #e1e1e1;
+        background-color: #ebebeb;
         border-radius: 0px 0px 20px 20px;
         margin-bottom: 1.5rem;
         padding: 1rem;
@@ -70,6 +62,7 @@ const ContainerItems = styled.div`
             text-align: center;
             font-size: 1.1rem;
             padding: 0;
+            color: green;
         }
     }
 
@@ -77,7 +70,7 @@ const ContainerItems = styled.div`
         height: 100%;
         width: 90%;
         margin-top: 1rem;
-        background-color: #e1e1e1;
+        background-color: #ebebeb;
         border-radius: 20px 20px 0px 0px;
         padding: 1rem 1rem 0rem 1rem;
         overflow-y: auto;
@@ -87,21 +80,11 @@ const ContainerItems = styled.div`
 const Background = styled.div`
     height: 100vh;
     width: 100vw;
-    margin-top: 4.3rem;
     position: fixed;
     background-color: #0000007f;
     z-index: 1;
     visibility: ${props => !props.shopMenu ? "hidden" : "initial"};
 `
-
-const getTotal = (array) => {
-    let output = 0
-    array.map((item) => {
-        output += item.price
-    })
-
-    return output
-}
 
 const HeaderShop = ({ shopMenu, openShop, carrinho, removerCarrinho }) => {
     return (
@@ -109,9 +92,6 @@ const HeaderShop = ({ shopMenu, openShop, carrinho, removerCarrinho }) => {
         <Background shopMenu={shopMenu} onClick={openShop} />
         <Container shopMenu={shopMenu} >
             <ContainerItems>
-                <div>
-                    <AiOutlineClose onClick={openShop} />
-                </div>
                 <div className="shopContainer">
                     <HeaderShopContainer carrinho={carrinho} removerCarrinho={removerCarrinho} />
                 </div>
