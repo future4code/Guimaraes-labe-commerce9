@@ -5,11 +5,14 @@ import toys from './data/toys.json'
 import shirts from './data/toys.json'
 import Header from './components/Header';
 import Produtos from './components/Produtos/Produtos';
+import Carrinhoo from './components/Carrinhoo/Carrinhoo';
+import Filtro  from './components/Filtro/Filtro';
 
 const Container = styled.div`
   max-width: 1250px;
   margin: 0 auto;
-`
+`;
+
 
 class App extends React.Component{
 
@@ -49,24 +52,38 @@ class App extends React.Component{
   removerCarrinho = (produto) => {
     const novoCarrinho = this.state.carrinho.filter((item) => item.id !== produto.id)
     this.setState({carrinho: novoCarrinho})
-  }
-  
+  };
+
 
   render() {
     
     return (
       <>
-      <Header />
-      <Container>
+       <Header carrinho={this.state.carrinho} removerCarrinho={this.removerCarrinho} />
+      
+
+
+
+        <Container>
+
         <p>Labe-Brinquedos</p>
 
         <Produtos produtos={this.state.toys} adicionarCarrinho={this.adicionarCarrinho} />
+       
+        </Container>
+        <div className="Labe">
+        <Filtro/>
+        <br></br>
+        <Carrinhoo/>
+        </div>
 
-      </Container>
       </>
     );
   }
-}
   
+} 
+
+
+
 
 export default App;
