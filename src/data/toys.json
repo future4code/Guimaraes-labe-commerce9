@@ -1,0 +1,106 @@
+[
+  {   "id": 1,
+    "nome": "Arma",
+    "value": 150.00,
+    "imageUrl": "https://i.ibb.co/9h25HKP/arma.jpg"
+  },
+
+  {
+    "id": 2,
+   "nome":  "Ioda",
+    "value" : 559.00,
+    "imageUrl": "https://i.ibb.co/5GSxrSy/BONECO1.jpg"
+  },
+
+  {
+    "id": 3,
+    "nome": "FURBACCA",
+    "value": 799.00,
+    "imageUrl": "https://i.ibb.co/MctrwRh/FURBACCA.jpg"
+  },
+
+  {
+    "id": 4,
+    "nome": "HASBRO",
+    "value": 999.00,
+    "imageUrl": "https://i.ibb.co/Lp8sBSw/HASBRO.jpg"
+  },
+
+  {
+    "id": 5,
+    "nome":"Mascara",
+    "value": 250.00,
+    "imageUrl": "https://i.ibb.co/wrsJ8ny/MASCARA.jpg"
+  },
+
+  {
+    "id": 6,
+    "nome": "NAVE X",
+    "value": 1593.00,
+    "imageUrl":"https://i.ibb.co/ctt26YN/NAVE-X.jpg"
+  },
+
+  {
+    "id": 7,
+    "nome": "Stormtrooper",
+    "value": 450.00,
+    "imageUrl":"https://i.ibb.co/WDscf5T/STORMTROOPE.jpg"
+  },
+
+  {
+    "id": 8,
+    "nome": "DARTH VADER",
+    "value": 899.00,
+    "imageUrl": "https://i.ibb.co/6PMyVgc/DARTH-VADER.jpg"
+  },
+
+  {
+    "id": 9,
+    "nome": "RDD2",
+    "value": 103.90,
+    "imageUrl":"https://static3.tcdn.com.br/img/img_prod/460977/boneco_r2_d2_star_wars_despertar_da_forca_ep_7_the_force_awekens_hasbro_31875_1_20201211174127.jpg"
+  },
+
+  {
+    "id": 10,
+    "nome": "Strormtroope",
+    "value": 450.00,
+    "imageUrl":"https://i.ibb.co/WDscf5T/STORMTROOPE.jpg"
+  },
+
+  {
+    "id": 11,
+    "nome": "Jar Jar Binks",
+    "value": 99.90,
+    "imageUrl": "https://www.casasbahia-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=1426274183"
+  },
+
+  {
+    "id": 12,
+    "nome": "Estrela da Morte",
+    "value": 299.90,
+    "imageUrl": "https://m.media-amazon.com/images/I/41S7LowhFlL._AC_.jpg"
+  },
+
+  {
+    "id": 13,
+    "nome": "Millennium Falcon",
+    "value": 999.90,
+    "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_a79c7989-0c62-46fe-a944-0b254e8ef097?wid=488&hei=488&fmt=pjpeg"
+  },
+
+  {
+    "id": 14,
+    "nome": "Chewbacca",
+    "value": 1199.90,
+    "imageUrl": "https://cdn.awsli.com.br/600x700/432/432949/produto/16601484/97e0ffa54f.jpg"
+  },
+
+  {
+    "id": 15,
+    "nome": "Sabre de Luz",
+    "value": 99.90,
+    "imageUrl": "https://m.media-amazon.com/images/I/7146stWk2HL._AC_SX425_.jpg"
+  }
+
+]
